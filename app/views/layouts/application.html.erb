@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>🐴 Horse Dose : Cocktail Bar 🍹</title>
+    <title>🐴 Horse Dose : Horsetail Bar 🍹</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,11 +11,11 @@
 
   <body>
     <div class="navbar navbar-horse d-flex fixed-top">
-      <h4><%= link_to "cocktails", cocktails_path, class: 'horse-btn-yellow'%></h4>
+      <h4><%= link_to "horsetails", cocktails_path, class: 'horse-btn-yellow'%></h4>
       <h2>🐴</h2>
-      <h3>Horse Dose : Cocktail Bar</h3>
+      <h3>Horse Dose : Horsetail Bar</h3>
       <h2>🍹</h2>
-      <h4><%= link_to "new cocktail", new_cocktail_path, class: 'horse-btn-yellow' %></h4>
+      <h4><%= link_to "new horsetail", new_cocktail_path, class: 'horse-btn-yellow' %></h4>
     </div>
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
