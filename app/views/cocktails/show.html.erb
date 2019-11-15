@@ -1,19 +1,23 @@
 <div class="container more-space-top">
   <div class="row">
-    <div class="col-6">
+    <div class="">
       <h1 class="underline-yellow"><%= @cocktail.name %></h1>
 
-      <div class="recipe-card mt-4">
+        <div class="d-flex justify-content-between">
+          <div class="recipe-card mt-4">
 
-          <% @cocktail.doses.each do |d| %>
-            <div class="d-flex justify-content-between">
-              <h5><%= d.ingredient.name %></h5>
+            <% @cocktail.doses.each do |d| %>
+              <div class="d-flex justify-content-between">
+                <h5><%= d.ingredient.name %></h5>
 
-              <p class="text-right"><%= d.description %></p>
-            </div>
-          <% end %>
-          <%= link_to "add ingredients", new_cocktail_dose_path(@cocktail), class: 'btn btn-danger' %>
-
+                <p class="text-right"><%= d.description %></p>
+              </div>
+            <% end %>
+            <%= link_to "add ingredients", new_cocktail_dose_path(@cocktail), class: 'btn btn-danger' %>
+          </div>
+          <div class="mt-4 ml-5">
+            <%= cl_image_tag @cocktail.photo.key, :quality=>"auto", :fetch_format=>:auto  %>
+          </div>
         </div>
     </div>
   </div>
