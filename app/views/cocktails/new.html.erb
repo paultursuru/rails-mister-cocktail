@@ -6,6 +6,7 @@
       <div class="col-6 recipe-card d-flex flex-wrap">
           <%= simple_form_for @cocktail do |f| %>
             <%= f.input :name %>
+            <%= f.input :photo, as: :file %>
             <%= f.button :submit, class: "btn btn-danger" %>
           <% end %>
       </div>

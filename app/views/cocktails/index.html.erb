@@ -5,9 +5,15 @@
       <div class="d-flex flex-wrap">
         <% @cocktails.each do |c| %>
           <%= link_to(cocktail_path(c)) do %>
+          <% if c.photo.attached? %>
+            <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path c.photo.key, :quality=>"auto", :fetch_format=>:auto %>')">
+              <h5 class="cocktail-name"> <%= c.name %> </h5>
+            </div>
+          <% else %>
             <div class="cocktail-card">
               <h5 class="cocktail-name"> <%= c.name %> </h5>
             </div>
+          <% end %>
           <% end %>
         <% end %>
       </div>
