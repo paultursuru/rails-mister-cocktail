@@ -17,7 +17,7 @@ end
 10.times do
   cocktail_name = Faker::Creature::Horse.breed
   cocktail = Cocktail.new(name: cocktail_name)
-  file = URI.open("https://source.unsplash.com/300x200/?#{cocktail_name}")
+  file = URI.open("https://source.unsplash.com/300x200/?#{cocktail_name.parameterize}")
   puts file
   cocktail.photo.attach(io: file, filename: "some-image.jpg", content_type: 'image/jpg')
   cocktail.save
