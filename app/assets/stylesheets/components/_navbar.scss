@@ -1,6 +1,8 @@
-.navbar-lewagon {
+.navbar-horse {
   justify-content: space-between;
-  background: white;
+  background: black;
+  color: $cocktail-yellow;
+  box-shadow: 0 0 20px $cocktail-yellow;
 }
 
 .navbar-lewagon .navbar-collapse {

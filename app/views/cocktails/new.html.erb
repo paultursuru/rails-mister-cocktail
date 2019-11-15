@@ -1,0 +1,14 @@
+<div class="container more-space-top">
+  <div class="row">
+    <div class="col-6">
+      <h1>Creating a new cocktail</h1>
+
+      <div class="col-6 recipe-card d-flex flex-wrap">
+          <%= simple_form_for @cocktail do |f| %>
+            <%= f.input :name %>
+            <%= f.button :submit, class: "btn btn-danger" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

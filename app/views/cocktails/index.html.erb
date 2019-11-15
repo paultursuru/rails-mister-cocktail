@@ -1,0 +1,16 @@
+<div class="container more-space-top">
+  <div class="row">
+    <div class="">
+      <h1 class="underline-yellow title-box">Cocktail List</h1>
+      <div class="d-flex flex-wrap">
+        <% @cocktails.each do |c| %>
+          <%= link_to(cocktail_path(c)) do %>
+            <div class="cocktail-card">
+              <h5 class="cocktail-name"> <%= c.name %> </h5>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
