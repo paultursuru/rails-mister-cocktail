@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :doses, only: [:index, :new, :create] do
     end
   end
+  get '/upvote/:id', to: 'cocktails#upvote', as: 'upvote'
 end

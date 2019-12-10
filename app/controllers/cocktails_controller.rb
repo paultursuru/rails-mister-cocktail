@@ -1,10 +1,12 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: %I[show]
+  before_action :set_cocktail, only: %I[show, upvote]
   def index
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.all.order(votes: :desc)
   end
 
   def show
+        @cocktail = Cocktail.find(params[:id])
+
   end
 
   def new
@@ -17,6 +19,12 @@ class CocktailsController < ApplicationController
     redirect_to new_cocktail_dose_path(@cocktail)
   end
 
+  def upvote
+    @cocktail.votes += 1
+    @cocktail.save
+    redirect_to root_path
+  end
+
   private
 
   def set_cocktail
@@ -24,6 +32,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photo)
+    params.require(:cocktail).permit(:name, :photo, :vote)
   end
 end

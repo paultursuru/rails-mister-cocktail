@@ -1,5 +1,22 @@
 .horse-btn-yellow {
   padding: 5px;
   color: black;
-  background: $cocktail-yellow;
+  background: $yellow;
+}
+.votes {
+  position: relative;
+  top: 40px;
+  // left: 135px;
+  color: black !important;
+  background: #ffff00;
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  // border-radius: 5px;
+  display: inline-block;
+
+  p {
+    margin: 0;
+  }
+
 }

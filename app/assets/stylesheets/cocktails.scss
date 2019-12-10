@@ -6,31 +6,6 @@
   margin-top:100px;
 }
 
-.cocktail-card {
-  width: 200px;
-  min-height: 100px;
-  padding: 20px;
-  background: black;
-  color: $cocktail-yellow;
-  box-shadow: 2px 2px 10px rgba(10, 10, 10, 0.3);
-  text-align: center;
-  margin: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  }
-.cocktail-card:hover {
-  color: $cocktail-yellow;
-  background: black;
-  box-shadow: 0 0 30px $cocktail-yellow;
-  transition: all 1s ease;
-}
-
-.cocktail-name {
-  justify-content: center;
-  vertical-align: center;
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -42,7 +17,7 @@ a:hover {
 }
 
 .underline-yellow {
-  background: $cocktail-yellow;
+  background: $yellow;
   color: black;
 }
 
