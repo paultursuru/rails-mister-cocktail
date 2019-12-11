@@ -1,0 +1,10 @@
+<div class="recipe-card mt-4">
+
+  <% @cocktail.doses.each do |d| %>
+    <div class="d-flex justify-content-between">
+      <h5><%= d.ingredient.name %></h5>
+
+      <p class="text-right"><%= d.description %></p>
+    </div>
+  <% end %>
+</div>

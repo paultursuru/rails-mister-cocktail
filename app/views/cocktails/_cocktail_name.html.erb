@@ -1,0 +1,9 @@
+<% if cocktail.photo.attached? %>
+  <div class="cocktail-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, :quality=>"auto", :fetch_format=>:auto %>')">
+    <h5 class="cocktail-name"> <%= cocktail.name %> </h5>
+  </div>
+<% else %>
+  <div class="cocktail-card">
+    <h5 class="cocktail-name"> <%= cocktail.name %> </h5>
+  </div>
+<% end %>

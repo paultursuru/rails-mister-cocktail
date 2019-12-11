@@ -1,23 +1,6 @@
 .cocktail-card {
-  // width: 200px;
-  // height: 200px;
-  // margin: 20px;
-  // padding: 20px;
-
-  // p {
-  //   // text-align: right;
-  //     color: $yellow;
-
-  // }
-  // &:hover {
-  //   color: $yellow;
-  //   background: black;
-  //   box-shadow: 0 0 30px $yellow;
-  //   transition: all 1s ease;
-  // }
+  position: relative;
 }
-
-
 .cocktail-name {
   justify-content: center;
   position: relative;
@@ -43,10 +26,26 @@
 
   }
   &:hover {
-    color: $yellow;
-    background: black;
-    box-shadow: 0 0 30px $yellow;
-    transition: all 1s ease;
+    opacity: 0;
+    transition: all 0.5s ease-out;
   }
 }
 
+.cocktail-tail-card {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: black;
+  color: $yellow;
+  top: 54px;
+  left: 20px;
+  z-index: -1;
+  display: block;
+  align-items: center;
+  padding-top: 20px;
+  border: solid 1px $yellow;
+  p {
+    margin:0;
+    font-size: 12px;
+  }
+}

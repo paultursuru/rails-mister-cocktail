@@ -11,11 +11,10 @@
 
   <body>
     <div class="navbar navbar-horse d-flex fixed-top">
-      <h4><%= link_to "horsetails", cocktails_path, class: 'horse-btn-yellow'%></h4>
       <h2>🐴</h2>
-      <h3>Horse Dose : Horsetail Bar</h3>
+      <h3><%= link_to "Horse Dose : Horsetail Bar", cocktails_path %></h3>
       <h2>🍹</h2>
-      <h4><%= link_to "new horsetail", new_cocktail_path, class: 'horse-btn-yellow' %></h4>
+      <!-- <h4><%#= link_to "login", new_cocktail_path, class: 'horse-btn-yellow' %></h4> -->
     </div>
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

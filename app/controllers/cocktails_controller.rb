@@ -1,11 +1,11 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: %I[show, upvote]
+  before_action :set_cocktail, only: %I[index, show, upvote]
   def index
     @cocktails = Cocktail.all.order(votes: :desc)
   end
 
   def show
-        @cocktail = Cocktail.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
 
   end
 

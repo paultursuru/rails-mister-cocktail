@@ -3,6 +3,14 @@
   background: black;
   color: $yellow;
   box-shadow: 0 0 20px $yellow;
+
+  a {
+    color: $yellow;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

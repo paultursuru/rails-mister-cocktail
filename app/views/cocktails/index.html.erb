@@ -3,22 +3,32 @@
     <div class="">
       <h1 class="underline-yellow title-box">Horsetail List</h1>
       <div class="d-flex flex-wrap mt-4">
-        <% @cocktails.each do |c| %>
+        <% @cocktails.each do |cocktail| %>
           <div class="cocktail-card">
-            <%= link_to upvote_url(c), class: "votes" do %>
-              <p><%= c.votes %><i class="fas fa-heart ml-2"></i></p>
+            <%= link_to upvote_url(cocktail), class: "votes" do %>
+              <p><%= cocktail.votes %><i class="fas fa-heart ml-2"></i></p>
             <% end %>
-            <%= link_to(cocktail_path(c)) do %>
-              <% if c.photo.attached? %>
-                <div class="cocktail-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path c.photo.key, :quality=>"auto", :fetch_format=>:auto %>')">
-                  <h5 class="cocktail-name"> <%= c.name %> </h5>
+            <div class="cocktail-head-card">
+              <% if cocktail.photo.attached? %>
+                <div class="cocktail-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, :quality=>"auto", :fetch_format=>:auto %>')">
+                  <h5 class="cocktail-name"> <%= cocktail.name %> </h5>
                 </div>
               <% else %>
                 <div class="cocktail-card">
-                  <h5 class="cocktail-name"> <%= c.name %> </h5>
+                  <h5 class="cocktail-name"> <%= cocktail.name %> </h5>
                 </div>
               <% end %>
-            <% end %>
+            </div>
+            <div class="cocktail-tail-card">
+              <div class="">
+                <% cocktail.doses.each do |d| %>
+                  <div class="d-flex justify-content-between p-2">
+                    <p><%= d.ingredient.name %></p>
+                    <p class="text-right"><%= d.description %></p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
           </div>
         <% end %>
       </div>
